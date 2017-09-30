@@ -11,4 +11,5 @@ import UIKit
 class RoomCollectionViewCell: UICollectionViewCell
 {
     @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellName: UILabel!
 }
