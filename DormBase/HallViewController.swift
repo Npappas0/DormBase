@@ -30,8 +30,10 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         super.viewDidLoad()
         
-        hall = [Room(roomNo: "room1", capacity: 2, status: 0, studentEmail: "email1", password: "password1"), Room(roomNo: "room2", capacity: 3, status: 1, studentEmail: "email2", password: "password2"), Room(roomNo: "room3", capacity: 1, status: 2, studentEmail: "email3", password: "password3")]
-        
+        hall = [Room(roomNo: "201", capacity: 2, comments: "", status: 1, studentEmail1:"jpark@hawk.iit.edu", password1: "league", studentEmail2: "dmarten@hawk.iit.edu",               password2:"agriculture"),
+                Room(roomNo: "202", capacity: 2, comments: "", status: 2, studentEmail1:"wblodgett@hawk.iit.edu", password1: "durtle", studentEmail2: "khallsby@hawk.iit.edu", password2:"switzerland"),
+                Room(roomNo: "203", capacity: 1, comments: "", status: 1, studentEmail1:"dwollin@hawk.iit.edu", password1: "respectingwomen", studentEmail2: "", password2: ""),]
+       
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         resizeScreen()
         collectionView.reloadData()
