@@ -8,12 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: UIViewController, UITextFieldDelegate
 {
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        emailField.delegate = self;
+        passwordField.delegate = self;
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
+ 
 }
 
