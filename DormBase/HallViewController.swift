@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 private let reuseIdentifier = "Cell"
 
@@ -44,6 +45,10 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(grabRooms), for: UIControlEvents.valueChanged)
         collectionView.addSubview(refreshControl)
+    }
+    
+    func writeComment(newComment:String) -> Void {
+        self.ref.child("MSV").child("South").child("2nd Floor").child("201").child("Comments").setValue(newComment)
     }
     
     @objc func grabRooms()
