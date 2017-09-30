@@ -15,6 +15,7 @@
 		1F0A13CA1F7F3E0300707828 /* DormBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13C91F7F3E0300707828 /* DormBaseTests.swift */; };
 		1F0A13D51F7F3E0300707828 /* DormBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13D41F7F3E0300707828 /* DormBaseUITests.swift */; };
 		1F0A13E31F7F677300707828 /* HallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13E21F7F677300707828 /* HallViewController.swift */; };
+		1F0A13E51F7F69BB00707828 /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13E41F7F69BB00707828 /* RoomCollectionViewCell.swift */; };
 		F893A8771F7F5E2700ACA78E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F893A8761F7F5E2700ACA78E /* Room.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		1F0A13D41F7F3E0300707828 /* DormBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormBaseUITests.swift; sourceTree = "<group>"; };
 		1F0A13D61F7F3E0300707828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F0A13E21F7F677300707828 /* HallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallViewController.swift; sourceTree = "<group>"; };
+		1F0A13E41F7F69BB00707828 /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		F893A8761F7F5E2700ACA78E /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				1F0A13B41F7F3E0300707828 /* AppDelegate.swift */,
 				1F0A13B61F7F3E0300707828 /* MainViewController.swift */,
 				1F0A13B81F7F3E0300707828 /* Main.storyboard */,
+				1F0A13E41F7F69BB00707828 /* RoomCollectionViewCell.swift */,
 				1F0A13E21F7F677300707828 /* HallViewController.swift */,
 				F893A8761F7F5E2700ACA78E /* Room.swift */,
 				1F0A13BB1F7F3E0300707828 /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 			files = (
 				1F0A13B71F7F3E0300707828 /* MainViewController.swift in Sources */,
 				1F0A13B51F7F3E0300707828 /* AppDelegate.swift in Sources */,
+				1F0A13E51F7F69BB00707828 /* RoomCollectionViewCell.swift in Sources */,
 				F893A8771F7F5E2700ACA78E /* Room.swift in Sources */,
 				1F0A13E31F7F677300707828 /* HallViewController.swift in Sources */,
 			);
