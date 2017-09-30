@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Firebase
+import Firebase
 
 private let reuseIdentifier = "Cell"
 
@@ -19,10 +19,12 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     var hall = [Room]()
     var statusColor = [UIColor.red, UIColor.green, UIColor.yellow]
     
-    //var ref: FIRDatabaseReference
-    //{
-      //  return FIRDatabase.database().reference()
-    //}
+    var refreshControl: UIRefreshControl!
+    
+    var ref: DatabaseReference
+    {
+        return Database.database().reference()
+    }
     
     override func viewDidLoad()
     {
@@ -33,25 +35,33 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         resizeScreen()
         collectionView.reloadData()
+        
+        grabRooms()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(grabRooms), for: UIControlEvents.valueChanged)
+        collectionView.addSubview(refreshControl)
     }
-    /*
-    func grabLobbies()
+    
+    @objc func grabRooms()
     {
         hall.removeAll()
         ref.observeSingleEvent(of: .value, with:
             {   (snap) in
                 if let dict = snap.value as? [String:Any] {
-                    for lobbyName in dict.keys {
-                        if let lobbyDict = dict[lobbyName] as? [String:Any] {
-                            self.lobbies.append(Lobby(name: lobbyName, dict: lobbyDict))
+                    for room in dict.keys {
+                        if let roomValues = dict[room] as? [String:Any] {
+                            //print(roomValues["MSV"])
+                            //self.hall.append(Room(roomNo: <#T##String#>, capacity: <#T##Int#>, status: <#T##Int#>, studentEmail: <#T##String#>, password: <#T##String#>))
                         }
                     }
                 }
-                self.tableView.reloadData()
+                self.collectionView.reloadData()
                 self.refreshControl.endRefreshing()
         })
-    }
-    */
+     }
+ 
     func resizeScreen()
     {
         let screenSize : CGRect = UIScreen.main.bounds
