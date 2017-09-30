@@ -14,6 +14,7 @@
 		1F0A13BF1F7F3E0300707828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A13BD1F7F3E0300707828 /* LaunchScreen.storyboard */; };
 		1F0A13CA1F7F3E0300707828 /* DormBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13C91F7F3E0300707828 /* DormBaseTests.swift */; };
 		1F0A13D51F7F3E0300707828 /* DormBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13D41F7F3E0300707828 /* DormBaseUITests.swift */; };
+		F893A8771F7F5E2700ACA78E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F893A8761F7F5E2700ACA78E /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1F0A13D01F7F3E0300707828 /* DormBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DormBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0A13D41F7F3E0300707828 /* DormBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormBaseUITests.swift; sourceTree = "<group>"; };
 		1F0A13D61F7F3E0300707828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F893A8761F7F5E2700ACA78E /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				1F0A13B41F7F3E0300707828 /* AppDelegate.swift */,
 				1F0A13B61F7F3E0300707828 /* ViewController.swift */,
 				1F0A13B81F7F3E0300707828 /* Main.storyboard */,
+				F893A8761F7F5E2700ACA78E /* Room.swift */,
 				1F0A13BB1F7F3E0300707828 /* Assets.xcassets */,
 				1F0A13BD1F7F3E0300707828 /* LaunchScreen.storyboard */,
 				1F0A13C01F7F3E0300707828 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				1F0A13B71F7F3E0300707828 /* ViewController.swift in Sources */,
 				1F0A13B51F7F3E0300707828 /* AppDelegate.swift in Sources */,
+				F893A8771F7F5E2700ACA78E /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
