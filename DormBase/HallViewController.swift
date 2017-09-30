@@ -16,7 +16,7 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
-    var hall = [Room]()
+    var rooms = [Room]()
     var statusColor = [UIColor.red, UIColor.green, UIColor.yellow]
     
     var refreshControl: UIRefreshControl!
@@ -30,15 +30,14 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         super.viewDidLoad()
         
-        hall = [Room(roomNo: "201", capacity: 2, comments: "", status: 1, studentEmail1:"jpark@hawk.iit.edu", password1: "league", studentEmail2: "dmarten@hawk.iit.edu",               password2:"agriculture"),
-                Room(roomNo: "202", capacity: 2, comments: "", status: 2, studentEmail1:"wblodgett@hawk.iit.edu", password1: "durtle", studentEmail2: "khallsby@hawk.iit.edu", password2:"switzerland"),
-                Room(roomNo: "203", capacity: 1, comments: "", status: 1, studentEmail1:"dwollin@hawk.iit.edu", password1: "respectingwomen", studentEmail2: "", password2: ""),]
+        collectionView.delegate = self
+        collectionView.dataSource = self
        
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         resizeScreen()
         collectionView.reloadData()
         
-        grabRooms()
+        grabRooms(dorm: "MSV", hall: "South", floor: "2nd Floor")
         
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -46,17 +45,16 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.addSubview(refreshControl)
     }
     
-    @objc func grabRooms()
+    @objc func grabRooms(dorm : String, hall : String, floor : String)
     {
-        hall.removeAll()
-        ref.observeSingleEvent(of: .value, with:
+        rooms.removeAll()
+        ref.child(dorm).child(hall).child(floor).child("Room").observeSingleEvent(of: .value, with:
             {   (snap) in
                 if let dict = snap.value as? [String:Any] {
-                    for room in dict.keys {
-                        if let roomValues = dict[room] as? [String:Any] {
-                            //print(roomValues["MSV"])
-                            //self.hall.append(Room(roomNo: <#T##String#>, capacity: <#T##Int#>, status: <#T##Int#>, studentEmail: <#T##String#>, password: <#T##String#>))
-                        }
+                    for roomNum in dict.keys {
+                        if let roomValues = dict[roomNum] as? [String:Any] {
+                            self.rooms.append(Room(roomNo: roomNum, dict: roomValues))
+                       }
                     }
                 }
                 self.collectionView.reloadData()
@@ -78,15 +76,15 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return hall.count
+        return rooms.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! RoomCollectionViewCell
         
-        cell.cellName.text = hall[indexPath.item].getRoomNo() + "\n" + hall[indexPath.item].getStudentEmail1() + "\n" + hall[indexPath.item].getPassword1()
-        cell.backgroundColor = statusColor[hall[indexPath.item].getStatus()]
+        cell.cellName.text = ""
+        cell.backgroundColor = statusColor[rooms[indexPath.item].getStatus()]
         
         return cell
     }

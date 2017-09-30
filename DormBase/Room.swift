@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class Room: NSObject { //Variables of Room class
     var roomNo: String
@@ -18,15 +19,44 @@ class Room: NSObject { //Variables of Room class
     var password2: String
     var comments: String
     
-    init(roomNo: String, capacity: Int, comments: String, status: Int, studentEmail1: String, password1: String, studentEmail2: String, password2: String){ //Constructor of Room class
+    init(roomNo: String, dict: [String : Any])
+    { //Constructor of Room class
         self.roomNo = roomNo
-        self.capacity = capacity
-        self.status = status
-        self.studentEmail1 = studentEmail1
-        self.password1 = password1
-        self.studentEmail2 = studentEmail2
-        self.password2 = password2
-        self.comments = comments
+        self.capacity = 0
+        self.status = 0
+        self.studentEmail1 = ""
+        self.studentEmail2 = ""
+        self.password1 = ""
+        self.password2 = ""
+        self.comments = ""
+        if let capacity = dict["Capacity"] as? Int
+        {
+           self.capacity = capacity
+        }
+        if let status = dict["Status"] as? Int
+        {
+            self.status = status
+        }
+        if let studentEmail1 = dict["Email1"] as? String
+        {
+            self.studentEmail1 = studentEmail1
+        }
+        if let password1 = dict["Password1"] as? String
+        {
+            self.password1 = password1
+        }
+        if let studentEmail2 = dict["Email2"] as? String
+        {
+            self.studentEmail2 = studentEmail2
+        }
+        if let password2 = dict["Password2"] as? String
+        {
+            self.password2 = password2
+        }
+        if let comments = dict["Comments"] as? String
+        {
+            self.comments = comments
+        }
     }
     
     // Setters of Room Class
