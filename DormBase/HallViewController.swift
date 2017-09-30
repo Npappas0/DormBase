@@ -85,7 +85,7 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! RoomCollectionViewCell
         
-        cell.cellName.text = hall[indexPath.item].getRoomNo() + "\n" + hall[indexPath.item].getStudentEmail() + "\n" + hall[indexPath.item].getPassword()
+        cell.cellName.text = hall[indexPath.item].getRoomNo() + "\n" + hall[indexPath.item].getStudentEmail1() + "\n" + hall[indexPath.item].getPassword1()
         cell.backgroundColor = statusColor[hall[indexPath.item].getStatus()]
         
         return cell
