@@ -89,16 +89,21 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE6-BQ-7Fg" userLabel="Room Name">
-                                                    <rect key="frame" x="4" y="15" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NE6-BQ-7Fg" userLabel="Room Name">
+                                                    <rect key="frame" x="0.0" y="2" width="50" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.55938240651962423" green="1" blue="0.43019532323716314" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="NE6-BQ-7Fg" secondAttribute="trailing" id="Fcu-B9-FVH"/>
+                                            <constraint firstAttribute="bottom" secondItem="NE6-BQ-7Fg" secondAttribute="bottom" id="Fls-XV-eLI"/>
+                                            <constraint firstItem="NE6-BQ-7Fg" firstAttribute="top" secondItem="RvO-Dp-ogS" secondAttribute="top" constant="2" id="ZbI-gS-tAK"/>
+                                            <constraint firstItem="NE6-BQ-7Fg" firstAttribute="leading" secondItem="RvO-Dp-ogS" secondAttribute="leading" id="uWD-Uj-aZR"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="cellImage" destination="jkO-Y4-iNi" id="pWt-TC-ish"/>
                                             <outlet property="cellName" destination="NE6-BQ-7Fg" id="39H-tR-sid"/>

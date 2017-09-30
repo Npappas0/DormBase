@@ -28,7 +28,7 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         super.viewDidLoad()
         
-        hall = [Room(roomNo: "room1", capacity: 2, status: 0, studentEmail: "email1", password: "email2"), Room(roomNo: "room2", capacity: 3, status: 1, studentEmail: "email2", password: "password2"), Room(roomNo: "room3", capacity: 1, status: 2, studentEmail: "email3", password: "password3")]
+        hall = [Room(roomNo: "room1", capacity: 2, status: 0, studentEmail: "email1", password: "password1"), Room(roomNo: "room2", capacity: 3, status: 1, studentEmail: "email2", password: "password2"), Room(roomNo: "room3", capacity: 1, status: 2, studentEmail: "email3", password: "password3")]
         
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         resizeScreen()
@@ -73,7 +73,7 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! RoomCollectionViewCell
         
-        cell.cellName.text = hall[indexPath.item].getRoomNo()
+        cell.cellName.text = hall[indexPath.item].getRoomNo() + "\n" + hall[indexPath.item].getStudentEmail() + "\n" + hall[indexPath.item].getPassword()
         cell.backgroundColor = statusColor[hall[indexPath.item].getStatus()]
         
         return cell
