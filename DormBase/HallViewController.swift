@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Firebase
 
 private let reuseIdentifier = "Cell"
 
@@ -18,6 +19,11 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     var hall = [Room]()
     var statusColor = [UIColor.red, UIColor.green, UIColor.yellow]
     
+    //var ref: FIRDatabaseReference
+    //{
+      //  return FIRDatabase.database().reference()
+    //}
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -28,7 +34,24 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
         resizeScreen()
         collectionView.reloadData()
     }
-    
+    /*
+    func grabLobbies()
+    {
+        hall.removeAll()
+        ref.observeSingleEvent(of: .value, with:
+            {   (snap) in
+                if let dict = snap.value as? [String:Any] {
+                    for lobbyName in dict.keys {
+                        if let lobbyDict = dict[lobbyName] as? [String:Any] {
+                            self.lobbies.append(Lobby(name: lobbyName, dict: lobbyDict))
+                        }
+                    }
+                }
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+        })
+    }
+    */
     func resizeScreen()
     {
         let screenSize : CGRect = UIScreen.main.bounds

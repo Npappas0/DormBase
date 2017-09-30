@@ -1,0 +1,6 @@
+framework module Pods_DormBaseUITests {
+  umbrella header "Pods-DormBaseUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
