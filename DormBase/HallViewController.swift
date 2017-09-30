@@ -1,0 +1,17 @@
+//
+//  HallViewController.swift
+//  DormBase
+//
+//  Created by Nick Pappas on 9/30/17.
+//  Copyright © 2017 Nick Pappas. All rights reserved.
+//
+
+import UIKit
+
+class HallViewController: UIViewController
+{
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+    }
+}

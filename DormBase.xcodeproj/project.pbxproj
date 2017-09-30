@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1F0A13B51F7F3E0300707828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13B41F7F3E0300707828 /* AppDelegate.swift */; };
-		1F0A13B71F7F3E0300707828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13B61F7F3E0300707828 /* ViewController.swift */; };
+		1F0A13B71F7F3E0300707828 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13B61F7F3E0300707828 /* MainViewController.swift */; };
 		1F0A13BA1F7F3E0300707828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A13B81F7F3E0300707828 /* Main.storyboard */; };
 		1F0A13BC1F7F3E0300707828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A13BB1F7F3E0300707828 /* Assets.xcassets */; };
 		1F0A13BF1F7F3E0300707828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A13BD1F7F3E0300707828 /* LaunchScreen.storyboard */; };
 		1F0A13CA1F7F3E0300707828 /* DormBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13C91F7F3E0300707828 /* DormBaseTests.swift */; };
 		1F0A13D51F7F3E0300707828 /* DormBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13D41F7F3E0300707828 /* DormBaseUITests.swift */; };
+		1F0A13E31F7F677300707828 /* HallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13E21F7F677300707828 /* HallViewController.swift */; };
 		F893A8771F7F5E2700ACA78E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F893A8761F7F5E2700ACA78E /* Room.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		1F0A13B11F7F3E0300707828 /* DormBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DormBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0A13B41F7F3E0300707828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F0A13B61F7F3E0300707828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F0A13B61F7F3E0300707828 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1F0A13B91F7F3E0300707828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F0A13BB1F7F3E0300707828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F0A13BE1F7F3E0300707828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		1F0A13D01F7F3E0300707828 /* DormBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DormBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F0A13D41F7F3E0300707828 /* DormBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormBaseUITests.swift; sourceTree = "<group>"; };
 		1F0A13D61F7F3E0300707828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F0A13E21F7F677300707828 /* HallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallViewController.swift; sourceTree = "<group>"; };
 		F893A8761F7F5E2700ACA78E /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				1F0A13B41F7F3E0300707828 /* AppDelegate.swift */,
-				1F0A13B61F7F3E0300707828 /* ViewController.swift */,
+				1F0A13B61F7F3E0300707828 /* MainViewController.swift */,
 				1F0A13B81F7F3E0300707828 /* Main.storyboard */,
+				1F0A13E21F7F677300707828 /* HallViewController.swift */,
 				F893A8761F7F5E2700ACA78E /* Room.swift */,
 				1F0A13BB1F7F3E0300707828 /* Assets.xcassets */,
 				1F0A13BD1F7F3E0300707828 /* LaunchScreen.storyboard */,
@@ -262,9 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F0A13B71F7F3E0300707828 /* ViewController.swift in Sources */,
+				1F0A13B71F7F3E0300707828 /* MainViewController.swift in Sources */,
 				1F0A13B51F7F3E0300707828 /* AppDelegate.swift in Sources */,
 				F893A8771F7F5E2700ACA78E /* Room.swift in Sources */,
+				1F0A13E31F7F677300707828 /* HallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
