@@ -98,8 +98,11 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
-    func doesEmailMatch(Email: String) -> Bool {
-       
+    func doesEmailAndPasswordMatch(Email: String,Password: String) -> Bool {
+        if((Email == authEmail) && (Password == authPass)){
+                return true
+        }
+        return false
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
