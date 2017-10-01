@@ -98,8 +98,9 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
         return cell
     }
     
-    func doesEmailAndPasswordMatch(Email: String,Password: String) -> Bool {
-        if((Email == authEmail) && (Password == authPass)){
+    func doesEmailAndPasswordMatch(room: Room) -> Bool {
+        
+        if((room.getStudentEmail1() == authEmail || room.getStudentEmail2() == authEmail) && (room.getPassword1() == authPass || room.getPassword2() == authPass)){
                 return true
         }
         return false
