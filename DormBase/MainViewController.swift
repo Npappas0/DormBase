@@ -34,8 +34,8 @@ class MainViewController: UIViewController, UITextFieldDelegate
                 {   (vc) in
                     if let nextVC = vc as? HallViewController
                     {
-                    nextVC.authEmail = emailField.text
-                    nextVC.authPass = passwordField.text
+                        nextVC.authEmail = self.emailField.text!
+                        nextVC.authPass = self.passwordField.text!
                 }
             })
         }
