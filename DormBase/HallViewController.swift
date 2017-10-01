@@ -47,10 +47,13 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.addSubview(refreshControl)
     }
     
+<<<<<<< HEAD
     func writeComment(newComment:String) -> Void {
         self.ref.child("MSV").child("South").child("2nd Floor").child("201").child("Comments").setValue(newComment)
     }
     
+=======
+>>>>>>> parent of 1a486e2... Added reading and Changed room class
     @objc func grabRooms()
     {
         hall.removeAll()
