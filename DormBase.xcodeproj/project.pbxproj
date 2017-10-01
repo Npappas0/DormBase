@@ -647,11 +647,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-<<<<<<< HEAD
-=======
 				DEVELOPMENT_TEAM = 336695RJ3Y;
->>>>>>> df477a2afa6e9439bed2fcf1519287f9d3c6c4b2
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DormBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MobileApps.FinalMobileApp;
@@ -667,11 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-<<<<<<< HEAD
-=======
 				DEVELOPMENT_TEAM = 336695RJ3Y;
->>>>>>> df477a2afa6e9439bed2fcf1519287f9d3c6c4b2
-				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DormBase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MobileApps.FinalMobileApp;
