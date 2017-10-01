@@ -19,6 +19,9 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     var rooms = [Room]()
     var statusColor = [UIColor.gray, UIColor.green, UIColor.yellow, UIColor.red]
     
+    var authEmail = ""
+    var authPass = ""
+    
     var refreshControl: UIRefreshControl!
     
     var ref: DatabaseReference
