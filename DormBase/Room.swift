@@ -19,8 +19,6 @@ class Room: NSObject { //Variables of Room class
     var password2: String
     var comments: String
     
-    init(roomNo: String, dict: [String : Any])
-    { //Constructor of Room class
         self.roomNo = roomNo
         self.capacity = 0
         self.status = 0

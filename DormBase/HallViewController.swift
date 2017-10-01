@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 private let reuseIdentifier = "Cell"
 
@@ -30,14 +31,11 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         super.viewDidLoad()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
        
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         resizeScreen()
         collectionView.reloadData()
         
-        grabRooms(dorm: "MSV", hall: "South", floor: "2nd Floor")
         
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -45,16 +43,9 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
         collectionView.addSubview(refreshControl)
     }
     
-    @objc func grabRooms(dorm : String, hall : String, floor : String)
     {
-        rooms.removeAll()
-        ref.child(dorm).child(hall).child(floor).child("Room").observeSingleEvent(of: .value, with:
             {   (snap) in
                 if let dict = snap.value as? [String:Any] {
-                    for roomNum in dict.keys {
-                        if let roomValues = dict[roomNum] as? [String:Any] {
-                            self.rooms.append(Room(roomNo: roomNum, dict: roomValues))
-                       }
                     }
                 }
                 self.collectionView.reloadData()
@@ -76,7 +67,6 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return rooms.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
