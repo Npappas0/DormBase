@@ -61,7 +61,11 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
                 self.refreshControl.endRefreshing()
         })
      }
- 
+    
+    func writeComment(newComment: String) -> Void {
+        self.ref.child("MSV").child("South").child("2nd Floor").child("Room").child("201").child("Comments").setValue(newComment)
+    }
+    
     func resizeScreen()
     {
         let screenSize : CGRect = UIScreen.main.bounds
