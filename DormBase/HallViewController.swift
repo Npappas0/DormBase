@@ -33,6 +33,8 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         super.viewDidLoad()
         
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
        
