@@ -18,6 +18,8 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var rooms = [Room]()
     var statusColor = [UIColor.gray, UIColor.green, UIColor.yellow, UIColor.red]
+    var authEmail = ""
+    var authPass = ""
     
     var refreshControl: UIRefreshControl!
     
@@ -95,6 +97,14 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        
+        let room = rooms[indexPath.row]
+        if((room.getStudentEmail1() == authEmail || room.getStudentEmail2() == authEmail) && (room.getPassword1() == authPass || room.getPassword2() == authPass))
+        {
+            room.setRoom(newRoomNo: "Your room")
+        }
+        else
+        {
+            room.setRoom(newRoomNo: "Not your room")
+        }
     }
 }
