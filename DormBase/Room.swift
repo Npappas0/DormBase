@@ -28,7 +28,7 @@ class Room: NSObject { //Variables of Room class
         self.studentEmail2 = ""
         self.password1 = ""
         self.password2 = ""
-        self.comments = ""
+        self.comments = ""  
         if let capacity = dict["Capacity"] as? Int
         {
            self.capacity = capacity

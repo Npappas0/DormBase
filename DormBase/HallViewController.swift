@@ -17,7 +17,7 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     var rooms = [Room]()
-    var statusColor = [UIColor.red, UIColor.green, UIColor.yellow]
+    var statusColor = [UIColor.gray, UIColor.green, UIColor.yellow, UIColor.red]
     
     var refreshControl: UIRefreshControl!
     
@@ -83,7 +83,7 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! RoomCollectionViewCell
         
-        cell.cellName.text = ""
+        cell.cellName.text = rooms[indexPath.item].getRoomNo()
         cell.backgroundColor = statusColor[rooms[indexPath.item].getStatus()]
         
         return cell
