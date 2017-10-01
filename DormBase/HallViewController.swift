@@ -95,6 +95,6 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        
+        writeComment(newComment: "it's okay. it's okay it's gonna be okay")
     }
 }
