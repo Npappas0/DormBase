@@ -19,6 +19,8 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var hall = [Room]()
     var statusColor = [UIColor.red, UIColor.green, UIColor.yellow]
+    var rooms = [Room]()
+    var statusColor = [UIColor.gray, UIColor.green, UIColor.yellow, UIColor.red]
     
     var refreshControl: UIRefreshControl!
     
@@ -31,15 +33,11 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     {
         super.viewDidLoad()
         
-        hall = [Room(roomNo: "201", capacity: 2, comments: "", status: 1, studentEmail1:"jpark@hawk.iit.edu", password1: "league", studentEmail2: "dmarten@hawk.iit.edu",               password2:"agriculture"),
-                Room(roomNo: "202", capacity: 2, comments: "", status: 2, studentEmail1:"wblodgett@hawk.iit.edu", password1: "durtle", studentEmail2: "khallsby@hawk.iit.edu", password2:"switzerland"),
-                Room(roomNo: "203", capacity: 1, comments: "", status: 1, studentEmail1:"dwollin@hawk.iit.edu", password1: "respectingwomen", studentEmail2: "", password2: ""),]
        
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         resizeScreen()
         collectionView.reloadData()
         
-        grabRooms()
         
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -56,15 +54,8 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
 >>>>>>> parent of 1a486e2... Added reading and Changed room class
     @objc func grabRooms()
     {
-        hall.removeAll()
-        ref.observeSingleEvent(of: .value, with:
             {   (snap) in
                 if let dict = snap.value as? [String:Any] {
-                    for room in dict.keys {
-                        if let roomValues = dict[room] as? [String:Any] {
-                            //print(roomValues["MSV"])
-                            //self.hall.append(Room(roomNo: <#T##String#>, capacity: <#T##Int#>, status: <#T##Int#>, studentEmail: <#T##String#>, password: <#T##String#>))
-                        }
                     }
                 }
                 self.collectionView.reloadData()
@@ -86,15 +77,14 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return hall.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! RoomCollectionViewCell
         
-        cell.cellName.text = hall[indexPath.item].getRoomNo() + "\n" + hall[indexPath.item].getStudentEmail1() + "\n" + hall[indexPath.item].getPassword1()
-        cell.backgroundColor = statusColor[hall[indexPath.item].getStatus()]
+        cell.cellName.text = rooms[indexPath.item].getRoomNo()
+        cell.backgroundColor = statusColor[rooms[indexPath.item].getStatus()]
         
         return cell
     }
