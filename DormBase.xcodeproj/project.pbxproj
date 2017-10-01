@@ -19,6 +19,7 @@
 		1F0A13E31F7F677300707828 /* HallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13E21F7F677300707828 /* HallViewController.swift */; };
 		1F0A13E51F7F69BB00707828 /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13E41F7F69BB00707828 /* RoomCollectionViewCell.swift */; };
 		1F0A13EA1F80205900707828 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F0A13E91F801D7F00707828 /* GoogleService-Info.plist */; };
+		1F0A13EC1F808FA700707828 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0A13EB1F808FA700707828 /* DetailViewController.swift */; };
 		73EE0A597A5FE5E6DCBF6BDA /* Pods_DormBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0358057843D00B65C0155711 /* Pods_DormBaseTests.framework */; };
 		F893A8771F7F5E2700ACA78E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = F893A8761F7F5E2700ACA78E /* Room.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		1F0A13E21F7F677300707828 /* HallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HallViewController.swift; sourceTree = "<group>"; };
 		1F0A13E41F7F69BB00707828 /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		1F0A13E91F801D7F00707828 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1F0A13EB1F808FA700707828 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2F11DB1265A29FDCED505FE0 /* Pods-DormBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DormBase.release.xcconfig"; path = "Pods/Target Support Files/Pods-DormBase/Pods-DormBase.release.xcconfig"; sourceTree = "<group>"; };
 		325F85128EDEA7CE7ABC85A6 /* Pods_DormBaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DormBaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50C3ED2BF39230211A0188AA /* Pods-DormBaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DormBaseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DormBaseUITests/Pods-DormBaseUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				1F0A13B41F7F3E0300707828 /* AppDelegate.swift */,
 				1F0A13B61F7F3E0300707828 /* MainViewController.swift */,
 				1F0A13B81F7F3E0300707828 /* Main.storyboard */,
+				1F0A13EB1F808FA700707828 /* DetailViewController.swift */,
 				1F0A13E41F7F69BB00707828 /* RoomCollectionViewCell.swift */,
 				1F0A13E21F7F677300707828 /* HallViewController.swift */,
 				F893A8761F7F5E2700ACA78E /* Room.swift */,
@@ -478,6 +481,7 @@
 				1F0A13B71F7F3E0300707828 /* MainViewController.swift in Sources */,
 				1F0A13B51F7F3E0300707828 /* AppDelegate.swift in Sources */,
 				1F0A13E51F7F69BB00707828 /* RoomCollectionViewCell.swift in Sources */,
+				1F0A13EC1F808FA700707828 /* DetailViewController.swift in Sources */,
 				F893A8771F7F5E2700ACA78E /* Room.swift in Sources */,
 				1F0A13E31F7F677300707828 /* HallViewController.swift in Sources */,
 			);

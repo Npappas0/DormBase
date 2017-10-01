@@ -107,6 +107,21 @@ class HallViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        writeComment(newComment: "it's okay. it's okay it's gonna be okay")
+        goToView(withID: "DViewController", handler:
+            {   (vc) in
+                if let nextVC = vc as? DetailViewController
+                {
+                    nextVC.room = self.rooms[indexPath.item]
+                }
+        })
+    }
+    
+    func goToView(withID identifier: String, handler: ((UIViewController) -> Void)?)
+    {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: identifier)
+        {
+            if handler != nil {handler!(vc)}
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

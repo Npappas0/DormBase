@@ -25,26 +25,22 @@ class MainViewController: UIViewController, UITextFieldDelegate
         textField.resignFirstResponder()
         return true
     }
- 
     
     @IBAction func onButtonPress(_ sender: Any)
     {
         if(emailField.text != nil && passwordField != nil)
         {
-            self.goToView(withID: "HallViewController", handler:
+            goToView(withID: "HallViewController", handler:
                 {   (vc) in
                     if let nextVC = vc as? HallViewController
                     {
                         nextVC.authEmail = self.emailField.text!
                         nextVC.authPass = self.passwordField.text!
-                }
-            })
+                    }
+                })
         }
     }
-}
-
-extension UIViewController
-{
+    
     func goToView(withID identifier: String, handler: ((UIViewController) -> Void)?)
     {
         if let vc = storyboard?.instantiateViewController(withIdentifier: identifier)
